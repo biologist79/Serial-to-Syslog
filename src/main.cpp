@@ -34,7 +34,7 @@ void setup() {
   Serial.begin(115200);
   Serial.println();
   Serial.println();
-  Serial.print("Connecting to ");
+  Serial.print(F("Connecting to "));
   Serial.println(ssid);
 
   WiFi.mode(WIFI_STA);
@@ -46,11 +46,11 @@ void setup() {
   }
 
   Serial.println("");
-  Serial.println("WiFi connected");
-  Serial.println("IP address: ");
+  Serial.println(F("WiFi connected"));
+  Serial.println(F("IP address: "));
   Serial.println(WiFi.localIP());
 
-  pushStringToSyslog("Serial-Debugger gestartet!");
+  pushStringToSyslog("Serial-Debugger started!");
 }
 
 
